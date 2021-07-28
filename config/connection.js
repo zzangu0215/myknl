@@ -1,4 +1,5 @@
-const Sequelize = require('sequelize');
+require("dotenv").config();
+const Sequelize = require("sequelize");
 
 // create connection to the db. Connect to JWASDB instance if env var provided.
 // (Heroku creates this variable when you provision a JAWSDB instance.)
@@ -12,8 +13,8 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_USER,
     process.env.DB_PW,
     {
-      host: 'localhost',
-      dialect: 'mysql',
+      host: "localhost",
+      dialect: "mysql",
       port: 3306,
     }
   );
