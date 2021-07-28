@@ -39,5 +39,5 @@ module.exports = {
   User,
   Pet,
   Kennel,
-  KennelPet,
+  Reservations,
 };
