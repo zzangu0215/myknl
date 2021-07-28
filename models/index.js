@@ -4,21 +4,21 @@ const Kennel = require("./Kennel");
 const KennelPet = require("./KennelPet");
 
 // Define sequelize associations in this file.
-Pet.belongsTo(User, {
-  foreignKey: "user_id",
-});
+// Pet.belongsTo(User, {
+//   foreignKey: "user_id",
+// });
 
-User.hasMany(Pet, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
-});
+// User.hasMany(Pet, {
+//   foreignKey: "user_id",
+//   onDelete: "CASCADE",
+// });
 
-Kennel.belongsToMany(Pet, {
-  through: {
-    model: KennelPet,
-    unique: true,
-  },
-});
+// Kennel.belongsToMany(Pet, {
+//   through: {
+//     model: KennelPet,
+//     unique: true,
+//   },
+// });
 // Kennel.hasMany(Pet, {
 //   foreignKey: "pet_id",
 //   onDelete: "CASCADE",

@@ -29,7 +29,6 @@ Pet.init(
     },
     isAggressive: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,

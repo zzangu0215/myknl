@@ -43,7 +43,7 @@ Kennel.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "pet",
+    modelName: "kennel",
   }
 );
 
