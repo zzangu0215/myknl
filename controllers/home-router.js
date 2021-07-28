@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+// const { User } = require("../models");
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -35,7 +35,7 @@ router.get("/profile", (req, res) => {
   }
 });
 
-router.get("/reserve", (req, res) => {
+router.get("/reservation/dates", (req, res) => {
   try {
     res.render("reserve-calendar");
   } catch (err) {
@@ -44,9 +44,18 @@ router.get("/reserve", (req, res) => {
   }
 });
 
-router.get("/kennel/:id", (req, res) => {
+router.get("/reservation/kennel", (req, res) => {
   try {
     res.render("reserve-kennel");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+  }
+});
+
+router.get("/reservation-lists", (req, res) => {
+  try {
+    res.render("reservation-lists");
   } catch (err) {
     console.error(err);
     res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
