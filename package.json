@@ -1,17 +1,18 @@
 {
-  "name": "express-hbars-boilerplate",
+  "name": "zzangu-and-the-pals",
   "version": "1.0.0",
-  "description": "This boilerplate may be used as a starting point for building a full-stack app with Handlebars, Express, and Sequelize/MySQL.",
+  "description": "",
   "private": true,
   "scripts": {
     "start": "node server.js",
     "test": "npm run lint",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "seed": "node seeds/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jun, Vivi, Izzy",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
