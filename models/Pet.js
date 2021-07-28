@@ -27,7 +27,7 @@ Pet.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    isAggresive: {
+    isAggressive: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
