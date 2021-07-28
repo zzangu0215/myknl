@@ -15,21 +15,6 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    breed: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    weight: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    isAggressive: {
-      type: DataTypes.BOOLEAN,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
