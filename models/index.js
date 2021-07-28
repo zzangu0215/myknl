@@ -8,10 +8,22 @@ const KennelPet = require("./KennelPet");
 //   foreignKey: "user_id",
 // });
 
+<<<<<<< Updated upstream
 // User.hasMany(Pet, {
 //   foreignKey: "user_id",
 //   onDelete: "CASCADE",
 // });
+=======
+<<<<<<< Updated upstream
+User.hasMany(Pet, {
+  foreignKey: "user_id",
+=======
+Pet.hasMany(Kennel, {
+  foreignKey: "pet_id",
+>>>>>>> Stashed changes
+  onDelete: "CASCADE",
+});
+>>>>>>> Stashed changes
 
 // Kennel.belongsToMany(Pet, {
 //   through: {
