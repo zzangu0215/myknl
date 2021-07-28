@@ -6,7 +6,7 @@ const petData = [
     breed: "Border Collie",
     weight: 45,
     age: 4,
-    isAggresive: false,
+    isAggressive: false,
     user_id: 1,
   },
   {
@@ -14,7 +14,7 @@ const petData = [
     breed: "Mastiff",
     weight: 98,
     age: 5,
-    isAggresive: false,
+    isAggressive: false,
     user_id: 2,
   },
   {
@@ -22,7 +22,7 @@ const petData = [
     breed: "German Shepherd",
     weight: 60,
     age: 2,
-    isAggresive: true,
+    isAggressive: true,
     user_id: 3,
   },
 ];

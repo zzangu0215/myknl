@@ -1,6 +1,7 @@
 const seedKennels = require("./kennel-seeds");
 const seedPets = require("./pet-seeds");
 const seedUsers = require("./user-seeds");
+const seedKennelPets = require("./kennel-pet-seeds");
 
 const sequelize = require("../config/connection");
 
@@ -11,11 +12,14 @@ const seedAll = async () => {
   await seedUsers();
   console.log("\n----- USERS SEEDED -----\n");
 
+  await seedPets();
+  console.log("\n----- PETS SEEDED -----\n");
+
   await seedKennels();
   console.log("\n----- KENNELS SEEDED -----\n");
 
-  await seedPets();
-  console.log("\n----- PETS SEEDED -----\n");
+  await seedKennelPets();
+  console.log("\n----- KENNEL-PETS SEEDED -----\n");
 
   process.exit(0);
 };
