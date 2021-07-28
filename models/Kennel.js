@@ -15,27 +15,9 @@ Kennel.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    isFull: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    pet_id: {
+    capacity: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "pet",
-        key: "id",
-      },
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
+      allowNull: false,
     },
   },
   {
