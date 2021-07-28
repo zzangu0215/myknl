@@ -12,10 +12,6 @@ Reservations.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    isWholeDay: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
     startDate: {
       type: DataTypes.STRING,
       allowNull: false,
