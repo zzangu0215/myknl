@@ -1,7 +1,6 @@
 {
   "root": true,
   "env": {
-    "browser": true,
     "commonjs": true,
     "es2021": true,
     "node": true
@@ -13,5 +12,12 @@
   "rules": {
     "prefer-const": "error",
     "no-var": "error"
-  }
+  },
+  "overrides": [{
+    "files": ["public/js/*.js"],
+    "env": {
+      "browser": true,
+      "jquery": true
+    }
+  }]
 }
