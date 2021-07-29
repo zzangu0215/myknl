@@ -1,26 +1,39 @@
 <h1>Reservation Page with the calendar</h1>
 
 <div id="app">
-  <v-date-picker is-expanded v-model="range" :model-config="modelConfig" is-range ></v-date-picker>
+  <v-date-picker v-model="range" :model-config="modelConfig" is-range is-expanded>
+
+  </v-date-picker>
+  <div class="flex-grow ml-4 text-sm">
+    <h4 class="text-gray-700">Select Date Range</h4>
+    <div class="flex">
+      <span class="inline-block w-16 font-semibold text-gray-600">Start:</span>
+      <span class="ml-2"></span>
+    </div>
+  </div>
 </div>
 
 <script>
-  data() {
-  return {
-    range: {
-      start: new Date(2020, 0, 6),
-      end: new Date(2020, 0, 9),
-    },
-    modelConfig: {
-      start: {
-        timeAdjust: '00:00:00',
+  import DatePicker from 'v-calendar'
+
+  export default {
+    data() {
+    return {
+      range: {
+        start: new Date(),
+        end: new Date(),
       },
-      end: {
-        timeAdjust: '23:59:59',
+      modelConfig: {
+        start: {
+          timeAdjust: '00:00:00',
+        },
+        end: {
+          timeAdjust: '23:59:59',
+        },
       },
-    },
-  }
-}
+    }
+    }
+  } 
 </script>
 
 <script src='https://unpkg.com/vue/dist/vue.js'></script>
