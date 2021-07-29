@@ -1,12 +1,29 @@
-<h1>Signup</h1>
-<form class='signup-form'>
-  <label for='username'>Username</label><br />
-  <input type='text' name='username' id='username' /><br />
-  <label for='password'>Password</label><br />
-  <input type='password' name='password' id='password' /><br />
-  <label for='confirm-password'>Confirm Password</label><br />
-  <input type='password' name='confirm-password' id='confirm-password' /><br />
-  <button class='btn' type='submit'>Submit</button>
+<form class="signup-form">
+  <div class="signup-container" id='interactive2'>
+    <h2>Sign Up</h2>
+    <br>
+
+    <label for="username"><b>Username</b></label>
+    <br>
+    <input type="text" placeholder="Enter Username" name="username" id="username">
+    <br>
+
+    <label for="password"><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" name="password" id="password">
+    <br>
+
+    <label for="confirm-password"><b>Confirm Password</b></label>
+    <br>
+    <input type="password" placeholder="Confirm Password" name="confirm-password" id="confirm-password">
+    <br>
+
+    <button type="submit" class="signupBtn">Sign Up</button>
+
+    <br>
+    <p>Alerady have an account? <a href="/login">Login Here</a></p>
+    
+  </div>
 </form>
-<p>Already have an account? <a href='/login'>Login Here</a></p>
+
 <script src='/js/signup.js'></script>
