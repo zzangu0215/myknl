@@ -3,17 +3,18 @@
 <section id="daterange-section">
   <div data-cy="daterange-inputs-parent">
     <h2>Please select your dates</h2>
-    <div id="daterange-inputs-container">
-      <div id="daterange-input-start-container" data-cy="daterange-input-start-container">
-        <input data-cy="daterange-input-start" id="start" type="text">
+    <form id="dateForm">
+      <div id="daterange-inputs-container">
+        <div id="daterange-input-start-container" data-cy="daterange-input-start-container">
+          <input data-cy="daterange-input-start" name="startDate" id="start" type="text">
+        </div>
+        <div id="daterange-input-end-container" data-cy="daterange-input-end-container">
+          <input data-cy="daterange-input-end" name="endDate" id="end" type="text">
+        </div>
       </div>
-      <div id="daterange-input-end-container" data-cy="daterange-input-end-container">
-        <input data-cy="daterange-input-end" id="end" type="text">
-      </div>
-    </div>
-     <button type="submit" id='submitBtn' class="loginBtn">Submit</button>
+      <button type="submit" id='submitBtn' class="loginBtn">Submit</button>
+    </form>
   </div>
 </section>
 <script src="https://unpkg.com/js-datepicker"></script>
 <script src="/js/datePicker.js"></script>
-
