@@ -9,7 +9,7 @@ const router = require("express").Router();
 //   // ...
 // });
 
-router.get("/", async (req, res) => {
+router.get("/home", async (req, res) => {
   try {
     res.render("home");
   } catch (err) {

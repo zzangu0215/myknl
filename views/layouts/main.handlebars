@@ -9,18 +9,24 @@
   </head>
   <body>
     <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Menu
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/profile">Profile</a></li>
-        <li><a class="dropdown-item" href="/aboutus">About Us</a></li>
-        <li><a class="dropdown-item" href="/reservation/dates">Make a Reservation</a></li>
-        <li><a class="dropdown-item" href="/reservation-lists">Reservations Lists</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Logout</a></li>
-      </ul>
+    <div class="position-relative">
+      <a href="/home">
+          <img id="logo" alt="logo" src="/images/MyKNL_Logo.png">
+      </a>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/profile">Profile</a></li>
+          <li><a class="dropdown-item" href="/aboutus">About Us</a></li>
+          <li><a class="dropdown-item" href="/reservation/dates">Make a Reservation</a></li>
+          <li><a class="dropdown-item" href="/reservation-lists">Reservations Lists</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Logout</a></li>
+        </ul>
+      </div>
     </div>
     {{{body}}}
     {{!-- <nav>
