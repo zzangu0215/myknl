@@ -35,6 +35,15 @@ router.get("/profile", (req, res) => {
   }
 });
 
+router.get("/aboutus", (req, res) => {
+  try {
+    res.render("aboutus");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+  }
+});
+
 router.get("/reservation/dates", (req, res) => {
   try {
     res.render("reserve-calendar");
