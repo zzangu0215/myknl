@@ -56,7 +56,10 @@ router.get("/reservation/dates", (req, res) => {
 
 router.get("/reservation/kennel", (req, res) => {
   try {
-    res.render("reserve-kennel");
+    res.render("reserve-kennel", {
+      startDate: req.query.startDate,
+      endDate: req.query.endDate,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send("⛔ Uh oh! An unexpected error occurred.");

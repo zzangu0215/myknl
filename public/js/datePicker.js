@@ -2,37 +2,22 @@ const dateRange = [];
 const datepickerStart = datepicker('[data-cy="daterange-input-start"]', {
   id: 1,
   alwaysShow: 0,
-  onSelect: (instance) => {
-    dateRange.push(instance.dateSelected);
-  },
 });
 const datepickerEnd = datepicker('[data-cy="daterange-input-end"]', {
   id: 1,
   alwaysShow: 0,
-  onSelect: (instance) => {
-    dateRange.push(instance.dateSelected);
-    console.log(dateRange);
-  },
 });
 
-const submitHandler = async (event) => {
+document.querySelector("#dateForm").addEventListener("submit", (event) => {
   event.preventDefault();
+  let startDate = document.querySelector("#start").value;
+  let endDate = document.querySelector("#end").value;
 
-  const response = await fetch("/api/reservations", {
-    method: "POST",
-    body: JSON.stringify({ datepickerStart, datepickerEnd }),
-    headers: { "Content-Type": "application/json" },
-  });
+  startDate = new Date(startDate).toISOString();
+  endDate = new Date(endDate).toISOString();
 
-  if (response.ok) {
-    document.location.replace("/reservations");
-  } else {
-    alert("Bad Request");
-  }
-};
-
-document.querySelector("#submitBtn").addEventListener("click", submitHandler);
-
+  document.location.href = `/reservation/kennel?startDate=${startDate}&endDate=${endDate}`;
+});
 // console.log(dateRange);
 
 // datepicker("input", {
