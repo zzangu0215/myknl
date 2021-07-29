@@ -11,23 +11,6 @@ b {
   padding: 15px;
 }
 
-input[type="text"],
-input[type="password"] {
-  width: 70%;
-  padding: 15px;
-  margin: 5px;
-  display: flex;
-  border: none;
-  background: rgb(230, 230, 230);
-  border-radius: 20px;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
 .btn {
   background-color: #008cba;
   border: none;
@@ -46,6 +29,25 @@ input[type="password"]:focus {
   color: black;
 }
 
+/* login and signup form */
+
+input[type="text"],
+input[type="password"] {
+  width: 70%;
+  padding: 15px;
+  margin: 5px;
+  display: flex;
+  border: none;
+  background: rgb(230, 230, 230);
+  border-radius: 20px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
 .login-form,
 .signup-form {
   display: flex;
@@ -53,7 +55,8 @@ input[type="password"]:focus {
 }
 
 .login-container,
-.signup-container {
+.signup-container,
+.addpet-container {
   justify-content: center;
   padding: 10vmin;
   background: white;
@@ -76,7 +79,8 @@ input[type="password"]:focus {
 } */
 
 .loginBtn,
-.signupBtn {
+.signupBtn,
+.addpetBtn {
   display: flex;
   justify-content: center;
   background-image: linear-gradient(
@@ -107,6 +111,10 @@ input[type="password"]:focus {
   width: 50%;
 }
 
+.addpetBtn {
+  width: 50%;
+}
+
 .loginBtn:hover,
 .signupBtn:hover {
   transition: 2s;
@@ -119,6 +127,8 @@ input[type="password"]:focus {
   width: 20%;
   height: auto;
 }
+
+/* cards */
 
 .box p {
   color: var(--grayishBlue);
@@ -135,12 +145,20 @@ input[type="password"]:focus {
   .box {
     height: 200px;
   }
+  .pet-box {
+    text-align: center;
+    height: 180px;
+  }
 }
 
 @media (max-width: 950px) and (min-width: 450px) {
   .box {
     text-align: center;
     height: 180px;
+  }
+  .pet-box {
+    text-align: center;
+    height: 100px;
   }
 }
 
@@ -172,68 +190,70 @@ h2 {
   border-top: 3px solid var(--orange);
 }
 
-/* delete button on profile page */
-
-.delete-btn-left {
-  position: absolute;
-  height: 100px;
-  width: 80px;
-  background-color: #e74c3c;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 50px;
-  margin: auto;
-  cursor: pointer;
-  border-top-left-radius: 13px;
-  border-bottom-left-radius: 13px;
-}
-
-.delete-btn-right {
-  position: absolute;
-  height: 100px;
-  width: 20px;
-  background-color: #e74c3c;
-  top: 0;
-  bottom: 0;
-  left: 50px;
-  right: 0;
-  margin: auto;
-  transition: 0.5s;
-  cursor: pointer;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
-}
-
-.fa-times {
-  font-size: 70px !important;
-  margin: 23px;
-  color: #fff;
-}
-
-.fa-check {
-  font-size: 70px !important;
-  margin-left: 7px;
-  margin-top: 13px;
-}
-
-.delete-btn-bar {
-  height: 80px;
-  width: 0px;
-  background-color: lightgray;
-  position: absolute;
-  top: 10px;
-  bottom: 0;
-  left: 80px;
-  right: 0;
-  transition: 0.5s;
+/* delete button on the profile page */
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
   overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
 }
 
-.delete-btn-bar-open {
-  width: 80px;
+.remove-btn:hover {
+  width: 120px;
 }
 
-.delete-btn-right-open {
-  left: 210px;
+.remove-btn::before,
+.remove-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: red;
+}
+
+.remove-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.remove-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  font-size: medium;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.remove-btn:hover::before,
+.remove-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.remove-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.remove-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.remove-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
 }

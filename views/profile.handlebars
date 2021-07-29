@@ -3,19 +3,43 @@
 <div class="profile-container">
   <h1 style="text-align: center;">Your Pets</h1>
 
-  <div class="box box-down cyan">
-    <h2>Zzangu</h2>
-    <div type='button' name='delete' class='delete-btn' >
-      <div class='delete-btn-left'>
-        <i class='but-icon fa fa-lg fa-times'></i>
-
-        <div class='delete-btn-bar'>
-          <i class='but-icon fa fa-lg fa-check'></i>
-        </div>
-      </div>
-      <div class='delete-btn-right'></div>
-    </div> 
+  <div class="pet-box box-down cyan">
+    <h2>Zzangu 
+      <button class="icon-btn remove-btn">  
+        <div class="btn-txt">Remove</div>
+      </button>
+    </h2>    
   </div>
+
+  <div class="pet-box box-down blue">
+    <h2>Zara 
+      <button class="icon-btn remove-btn">  
+        <div class="btn-txt">Remove</div>
+      </button>
+    </h2>    
+  </div>
+
+  <div class="pet-box box-down orange">
+    <h2>Meka 
+      <button class="icon-btn remove-btn">  
+        <div class="btn-txt">Remove</div>
+      </button>
+    </h2>    
+  </div>
+
+</div>
+
+<div class="profile-container">
+  <h1 style="text-align: center;">Add more pet!</h1>
+
+  <div class="addpet-container">
+    <label for="password"><b>Enter your pet's name.</b></label>
+    <br>
+    <input type="text" placeholder="Wrangler" name="petname" id="added-pet">
+    <br>
+    <button type="submit" class="addpetBtn">Submit</button>
+  </div>
+
 </div>
 
 <script src="/js/profile.js"></script>
