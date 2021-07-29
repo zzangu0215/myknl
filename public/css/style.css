@@ -16,6 +16,44 @@
   color: black;
 }
 
+.login-container {
+  justify-content: center;
+  padding: 8vmin;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  margin: 8vmin;
+  padding-right: 40vmin;
+}
+
+.formsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    -45deg,
+    #330099 15%,
+    #660088 40%,
+    #0099ff 90%
+  );
+  color: white;
+  font-weight: 450;
+  text-shadow: -0.5px 0 rgb(87, 87, 87), 0 0.5px rgb(87, 87, 87),
+    0.5px 0 rgb(87, 87, 87), 0 -0.5px rgb(87, 87, 87);
+  border-radius: 30px;
+  border: 0px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 2%;
+  padding: 1rem 0.5rem;
+  font-size: 2.5vmin;
+  width: 40%;
+}
+
 #logo {
   width: 10%;
   height: auto;
