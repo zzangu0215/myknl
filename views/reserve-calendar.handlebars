@@ -1,52 +1,19 @@
-<h1>Reservation Page with the calendar</h1>
-
-<div id="app">
-  <v-date-picker v-model="range" :model-config="modelConfig" is-range is-expanded>
-
-  </v-date-picker>
-  <div class="flex-grow ml-4 text-sm">
-    <h4 class="text-gray-700">Select Date Range</h4>
-    <div class="flex">
-      <span class="inline-block w-16 font-semibold text-gray-600">Start:</span>
-      <span class="ml-2"></span>
+<!-- DATERANGE -->
+<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+<section id="daterange-section">
+  <div data-cy="daterange-inputs-parent">
+    <h2>Please select your dates</h2>
+    <div id="daterange-inputs-container">
+      <div id="daterange-input-start-container" data-cy="daterange-input-start-container">
+        <input data-cy="daterange-input-start" type="text">
+      </div>
+      <div id="daterange-input-end-container" data-cy="daterange-input-end-container">
+        <input data-cy="daterange-input-end" type="text">
+      </div>
     </div>
+     <button type="submit" class="loginBtn">Submit</button>
   </div>
-</div>
+</section>
+<script src="https://unpkg.com/js-datepicker"></script>
+<script src="/js/datePicker.js"></script>
 
-<script>
-  import DatePicker from 'v-calendar'
-
-  export default {
-    data() {
-    return {
-      range: {
-        start: new Date(),
-        end: new Date(),
-      },
-      modelConfig: {
-        start: {
-          timeAdjust: '00:00:00',
-        },
-        end: {
-          timeAdjust: '23:59:59',
-        },
-      },
-    }
-    }
-  } 
-</script>
-
-<script src='https://unpkg.com/vue/dist/vue.js'></script>
-
-    <!-- 2. Link VCalendar Javascript (Plugin automatically installed) -->
-<script src='https://unpkg.com/v-calendar'></script>
-
-    <!--3. Create the Vue instance-->
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      selectedDate: null,
-    }
-  })
-</script>
