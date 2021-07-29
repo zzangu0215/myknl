@@ -28,21 +28,21 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", withAuth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
-    const petData = await Pet.destroy({
+    const reservationData = await Reservations.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        // user_id: req.session.user_id,
       },
     });
 
-    if (!petData) {
-      res.status(404).json({ message: "No pet found with this id!" });
+    if (!reservationData) {
+      res.status(404).json({ message: "No reservation found with this id!" });
       return;
     }
 
-    res.status(200).json(petData);
+    res.status(200).json(reservationData);
   } catch (err) {
     res.status(500).json(err);
   }
