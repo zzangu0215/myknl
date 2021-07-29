@@ -1,12 +1,12 @@
 const dateRange = [];
-datepicker('[data-cy="daterange-input-start"]', {
+const datepickerStart = datepicker('[data-cy="daterange-input-start"]', {
   id: 1,
   alwaysShow: 0,
   onSelect: (instance) => {
     dateRange.push(instance.dateSelected);
   },
 });
-datepicker('[data-cy="daterange-input-end"]', {
+const datepickerEnd = datepicker('[data-cy="daterange-input-end"]', {
   id: 1,
   alwaysShow: 0,
   onSelect: (instance) => {
@@ -14,6 +14,24 @@ datepicker('[data-cy="daterange-input-end"]', {
     console.log(dateRange);
   },
 });
+
+const submitHandler = async (event) => {
+  event.preventDefault();
+
+  const response = await fetch("/api/reservations", {
+    method: "POST",
+    body: JSON.stringify({ datepickerStart, datepickerEnd }),
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.ok) {
+    document.location.replace("/reservations");
+  } else {
+    alert("Bad Request");
+  }
+};
+
+document.querySelector("#submitBtn").addEventListener("click", submitHandler);
 
 // console.log(dateRange);
 
