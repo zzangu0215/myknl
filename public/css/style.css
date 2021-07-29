@@ -3,6 +3,7 @@ body {
   margin: 0px;
   background-image: url("../images/background.jpg");
   background-repeat: repeat;
+  opacity: 0.92;
 }
 
 b {
@@ -60,14 +61,18 @@ input[type="password"]:focus {
   margin: 5vmin;
 }
 
+.homepage-container {
+  justify-content: center;
+  background: rgb(240, 237, 236);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  padding: 2vmin;
+  margin: 2vmin;
+  border-radius: 7px;
+}
+
 /* .signup-container {
   padding-right: 40vmin;
 } */
-
-.formsContainer {
-  display: flex;
-  justify-content: center;
-}
 
 .loginBtn,
 .signupBtn {
@@ -110,6 +115,58 @@ input[type="password"]:focus {
 }
 
 #logo {
-  width: 10%;
+  width: 20%;
   height: auto;
+}
+
+.box p {
+  color: var(--grayishBlue);
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 20px;
+}
+
+@media (max-width: 450px) {
+  .box {
+    height: 200px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .box {
+    text-align: center;
+    height: 180px;
+  }
+}
+
+h2 {
+  color: var(--varyDarkBlue);
+  font-weight: var(--weight3);
+}
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
+.cyan {
+  border-top: 3px solid var(--cyan);
+}
+
+.blue {
+  border-top: 3px solid var(--blue);
+}
+.orange {
+  border-top: 3px solid var(--orange);
 }
