@@ -1,3 +1,32 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;
+}
+
+b {
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 70%;
+  padding: 15px;
+  margin: 5px;
+  display: flex;
+  border: none;
+  background: rgb(230, 230, 230);
+  border-radius: 20px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
 .btn {
   background-color: #008cba;
   border: none;
@@ -16,21 +45,32 @@
   color: black;
 }
 
-.login-container {
+.login-form,
+.signup-form {
+  display: flex;
   justify-content: center;
-  padding: 8vmin;
+}
+
+.login-container,
+.signup-container {
+  justify-content: center;
+  padding: 10vmin;
   background: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-  margin: 8vmin;
-  padding-right: 40vmin;
+  margin: 5vmin;
 }
+
+/* .signup-container {
+  padding-right: 40vmin;
+} */
 
 .formsContainer {
   display: flex;
   justify-content: center;
 }
 
-.submitBtn {
+.loginBtn,
+.signupBtn {
   display: flex;
   justify-content: center;
   background-image: linear-gradient(
@@ -51,15 +91,25 @@
   margin: 2%;
   padding: 1rem 0.5rem;
   font-size: 2.5vmin;
-  width: 40%;
+}
+
+.loginBtn {
+  width: 35%;
+}
+
+.signupBtn {
+  width: 50%;
+}
+
+.loginBtn:hover,
+.signupBtn:hover {
+  transition: 2s;
+  background-size: 200% auto;
+  background-position: right center;
+  border-radius: 30px;
 }
 
 #logo {
   width: 10%;
   height: auto;
 }
-
-
-
-
-
