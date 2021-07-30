@@ -49,14 +49,16 @@ input[type="password"]:focus {
 }
 
 .login-form,
-.signup-form {
+.signup-form,
+.datepick-form {
   display: flex;
   justify-content: center;
 }
 
 .login-container,
 .signup-container,
-.addpet-container {
+.addpet-container,
+.datepick-container {
   justify-content: center;
   padding: 10vmin;
   background: white;
@@ -80,7 +82,8 @@ input[type="password"]:focus {
 
 .loginBtn,
 .signupBtn,
-.addpetBtn {
+.addpetBtn,
+.dateSelectBtn {
   display: flex;
   justify-content: center;
   background-image: linear-gradient(
@@ -112,6 +115,10 @@ input[type="password"]:focus {
 }
 
 .addpetBtn {
+  width: 50%;
+}
+
+.dateSelectBtn {
   width: 50%;
 }
 

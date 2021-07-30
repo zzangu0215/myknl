@@ -1,13 +1,13 @@
-$(document).ready(function () {
-  $(".delete-btn").hover(function () {
-    $(".delete-btn-right").toggleClass("delete-btn-right-open");
-    $(".delete-btn-bar").toggleClass("delete-btn-bar-open");
-  });
+// $(document).ready(function () {
+//   $(".delete-btn").hover(function () {
+//     $(".delete-btn-right").toggleClass("delete-btn-right-open");
+//     $(".delete-btn-bar").toggleClass("delete-btn-bar-open");
+//   });
 
-  $(".delete-btn-bar").click(function () {
-    alert("Deleted");
-  });
-});
+//   $(".delete-btn-bar").click(function () {
+//     alert("Deleted");
+//   });
+// });
 
 // document.ready(function () {
 //   document.querySelector(".box").hover(function () {

@@ -1,9 +1,8 @@
-const dateRange = [];
-const datepickerStart = datepicker('[data-cy="daterange-input-start"]', {
+datepicker('[data-cy="daterange-input-start"]', {
   id: 1,
   alwaysShow: 0,
 });
-const datepickerEnd = datepicker('[data-cy="daterange-input-end"]', {
+datepicker('[data-cy="daterange-input-end"]', {
   id: 1,
   alwaysShow: 0,
 });
@@ -18,6 +17,7 @@ document.querySelector("#dateForm").addEventListener("submit", (event) => {
 
   document.location.href = `/reservation/kennel?startDate=${startDate}&endDate=${endDate}`;
 });
+
 // console.log(dateRange);
 
 // datepicker("input", {
