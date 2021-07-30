@@ -1,7 +1,7 @@
-var dropdown = document.getElementById("#userPets");
-var startDate = document.querySelector('input[name="startDate"]').value;
-var endDate = document.querySelector('input[name="endDate"]').value;
-var chosenPet = dropdown.options[dropdown.selectedIndex].value;
+const dropdown = document.getElementById("#userPets");
+const startDate = document.querySelector('input[name="startDate"]').value;
+const endDate = document.querySelector('input[name="endDate"]').value;
+const chosenPet = dropdown.options[dropdown.selectedIndex].value;
 
 const reservePet = async function (event) {
   event.preventDefault();

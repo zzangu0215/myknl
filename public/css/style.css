@@ -339,3 +339,8 @@ h2 {
     flex-direction: column;
   }
 }
+
+/* reservation page kennel selection */
+.kennel-select {
+  width: 680px;
+}

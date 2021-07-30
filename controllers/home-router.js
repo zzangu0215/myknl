@@ -66,9 +66,21 @@ router.get("/reservation/dates", (req, res) => {
   }
 });
 
-router.get("/reservation/kennel", (req, res) => {
+router.get("/reservation/kennel", async (req, res) => {
   try {
+    const petData = await Pet.findAll(
+      {
+        where: req.session.userId,
+      },
+      {
+        include: [{ model: User }],
+      }
+    );
+
+    const pets = petData.map((pet) => pet.get({ plain: true }));
+
     res.render("reserve-kennel", {
+      pets,
       startDate: req.query.startDate,
       endDate: req.query.endDate,
     });
