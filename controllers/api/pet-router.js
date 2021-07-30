@@ -2,10 +2,10 @@ const router = require("express").Router();
 const { Pet } = require("../../models");
 const withAuth = require("../../util/withAuth");
 
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newPet = await Pet.create({
-      ...req.body,
+      name: req.body.pet_name,
       user_id: req.session.user_id,
     });
 

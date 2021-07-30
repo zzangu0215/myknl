@@ -1,34 +1,58 @@
-const newFormHandler = async function (event) {
+async function petAddForm(event) {
   event.preventDefault();
+  const pet_name = document.querySelector("#added-pet").value;
 
-  const title = document.querySelector('input[name="post-title"]').value;
-  const body = document.querySelector('textarea[name="post-body"]').value;
-
-  await fetch("/api/post", {
+  // Send fetch request to add a new dish
+  const response = await fetch("/api/pet", {
     method: "POST",
     body: JSON.stringify({
-      title,
-      body,
+      pet_name,
     }),
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
+  // if the dish is added, the 'all' template will be rerendered
+  if (response.ok) {
+    document.location.replace("/profile");
+  } else {
+    alert("Failed to add pet");
+  }
+}
 
-  document.location.replace("/dashboard");
-};
+document.querySelector("#petAdd").addEventListener("click", petAddForm);
 
-const postId = document.querySelector('input[name="post-id"]').value;
+// const newFormHandler = async function (event) {
+//   event.preventDefault();
 
-const deleteClickHandler = async function () {
-  await fetch(`/api/post/${postId}`, {
-    method: "DELETE",
-  });
+//   const title = document.querySelector('input[name="post-title"]').value;
+//   const body = document.querySelector('textarea[name="post-body"]').value;
 
-  document.location.replace("/dashboard");
-};
+//   await fetch("/api/post", {
+//     method: "POST",
+//     body: JSON.stringify({
+//       title,
+//       body,
+//     }),
+//     headers: { "Content-Type": "application/json" },
+//   });
 
-document
-  .querySelector("#new-post-form")
-  .addEventListener("submit", newFormHandler);
-document
-  .querySelector("#delete-btn")
-  .addEventListener("click", deleteClickHandler);
+//   document.location.replace("/dashboard");
+// };
+
+// const postId = document.querySelector('input[name="post-id"]').value;
+
+// const deleteClickHandler = async function () {
+//   await fetch(`/api/post/${postId}`, {
+//     method: "DELETE",
+//   });
+
+//   document.location.replace("/dashboard");
+// };
+
+// document
+//   .querySelector("#new-post-form")
+//   .addEventListener("submit", newFormHandler);
+// document
+//   .querySelector("#delete-btn")
+//   .addEventListener("click", deleteClickHandler);
