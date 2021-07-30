@@ -342,5 +342,18 @@ h2 {
 
 /* reservation page kennel selection */
 .kennel-select {
-  width: 680px;
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pets-selection,
+.pets-dropdown {
+  width: 100%;
+}
+
+.user-pet {
+  width: 100%;
 }

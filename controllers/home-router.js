@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const { User, Pet } = require("../models");
+const { User, Pet, Kennel } = require("../models");
+const sequelize = require("../config/connection");
 
 // use withAuth middleware to redirect from protected routes.
 const withAuth = require("../util/withAuth");
@@ -68,14 +69,11 @@ router.get("/reservation/dates", (req, res) => {
 
 router.get("/reservation/kennel", async (req, res) => {
   try {
-    const petData = await Pet.findAll(
-      {
-        where: req.session.userId,
+    const petData = await Pet.findAll({
+      where: {
+        user_id: req.session.userId,
       },
-      {
-        include: [{ model: User }],
-      }
-    );
+    });
 
     const pets = petData.map((pet) => pet.get({ plain: true }));
 
