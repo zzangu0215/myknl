@@ -1,19 +1,35 @@
+<h1 id="reserve-calendar-h1" style="text-align: center;">Make a Reservation!</h1>
+
 <!-- DATERANGE -->
 <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 <section id="daterange-section">
   <div data-cy="daterange-inputs-parent">
-    <h2>Please select your dates</h2>
-    <form id="dateForm">
+
+    <form class="datepick-form" id="dateForm">
       <div id="daterange-inputs-container">
-        <div id="daterange-input-start-container" data-cy="daterange-input-start-container">
-          <input data-cy="daterange-input-start" name="startDate" id="start" type="text">
-        </div>
-        <div id="daterange-input-end-container" data-cy="daterange-input-end-container">
-          <input data-cy="daterange-input-end" name="endDate" id="end" type="text">
+
+        <div class="datepick-container">
+          <h2>Select the Dates For Us!</h2>
+          <br>
+
+          <label for="startdate"><b>Start Date:</b></label>
+          <div id="daterange-input-start-container" data-cy="daterange-input-start-container">
+            <input data-cy="daterange-input-start" placeholder="start date" name="startDate" id="start" type="text">
+          </div>
+
+          <label for="enddate"><b>End Date:</b></label>
+          <div id="daterange-input-end-container" data-cy="daterange-input-end-container">
+            <input data-cy="daterange-input-end" placeholder="end date" name="endDate" id="end" type="text">
+          </div>
+
+          <br>
+          <button type="submit" class="dateSelectBtn">Submit</button>
+
         </div>
       </div>
-      <button type="submit" id='submitBtn' class="loginBtn">Submit</button>
+      
     </form>
+
   </div>
 </section>
 <script src="https://unpkg.com/js-datepicker"></script>
