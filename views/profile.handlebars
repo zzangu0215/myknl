@@ -1,33 +1,20 @@
-<h1 id="profile-h1" style="text-align: center;">User Profile</h1>
+<h1 id="profile-h1" style="text-align: center;">Welcome, {{username}}!</h1>
 
-<div class="profile-container">
-  <h1 style="text-align: center;">Your Pets</h1>
-
-  <div class="pet-box box-down cyan">
-    <h2>Zzangu
-      <button class="icon-btn remove-btn">
-        <div class="btn-txt">Remove</div>
-      </button>
-    </h2>
+{{#if pets.length}}
+  <div class="profile-container pet-list">
+   <h1 style="text-align: center;">Your Pets:</h1>
+    {{#each pets as |pet|}}
+      <div class="pet-box box-down cyan">
+        <h2>{{pet.name}}
+          <button class="icon-btn remove-btn" data-id="{{pet.id}}">
+            <div class="btn-txt">Remove</div>
+          </button>
+        </h2>
+      </div>  
+    {{/each}}
   </div>
+{{/if}}
 
-  <div class="pet-box box-down blue">
-    <h2>Zara
-      <button class="icon-btn remove-btn">
-        <div class="btn-txt">Remove</div>
-      </button>
-    </h2>
-  </div>
-
-  <div class="pet-box box-down orange">
-    <h2>Meka
-      <button class="icon-btn remove-btn">
-        <div class="btn-txt">Remove</div>
-      </button>
-    </h2>
-  </div>
-
-</div>
 
 <div class="profile-container">
   <h1 style="text-align: center;">Add more pet!</h1>
