@@ -20,39 +20,40 @@ async function petAddForm(event) {
   }
 }
 
+async function removePet(event) {
+  event.preventDefault();
+  const pet_name = document.querySelector("#added-pet").value;
+
+  // Send fetch request to add a new dish
+  const response = await fetch("/api/pet/:id", {
+    method: "DELETE",
+  });
+  // if the dish is added, the 'all' template will be rerendered
+  if (response.ok) {
+    document.location.replace("/profile");
+  } else {
+    alert("Failed to remove a pet");
+  }
+}
+
+document.querySelector("#petAdd").addEventListener("click", petAddForm);
 document.querySelector("#petAdd").addEventListener("click", petAddForm);
 
-// const newFormHandler = async function (event) {
-//   event.preventDefault();
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute("data-id")) {
+//     const id = event.target.getAttribute("data-id");
 
-//   const title = document.querySelector('input[name="post-title"]').value;
-//   const body = document.querySelector('textarea[name="post-body"]').value;
+//     const response = await fetch(`/api/projects/${id}`, {
+//       method: "DELETE",
+//     });
 
-//   await fetch("/api/post", {
-//     method: "POST",
-//     body: JSON.stringify({
-//       title,
-//       body,
-//     }),
-//     headers: { "Content-Type": "application/json" },
-//   });
-
-//   document.location.replace("/dashboard");
+//     if (response.ok) {
+//       document.location.replace("/profile");
+//     } else {
+//       alert("Failed to delete project");
+//     }
+//   }
 // };
-
-// const postId = document.querySelector('input[name="post-id"]').value;
-
-// const deleteClickHandler = async function () {
-//   await fetch(`/api/post/${postId}`, {
-//     method: "DELETE",
-//   });
-
-//   document.location.replace("/dashboard");
-// };
-
 // document
-//   .querySelector("#new-post-form")
-//   .addEventListener("submit", newFormHandler);
-// document
-//   .querySelector("#delete-btn")
-//   .addEventListener("click", deleteClickHandler);
+//   .querySelector(".project-list")
+//   .addEventListener("click", delButtonHandler);
