@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { User, Pet } = require("../models");
+// const { User, Pet } = require("../models");
 
 // use withAuth middleware to redirect from protected routes.
 const withAuth = require("../util/withAuth");
@@ -12,7 +12,9 @@ const withAuth = require("../util/withAuth");
 
 router.get("/", async (req, res) => {
   try {
-    res.render("home");
+    res.render("home", {
+      isLoggedIn: req.session.isLoggedIn,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
@@ -27,7 +29,7 @@ router.get("/signup", (req, res) => {
   res.render("signup", { title: "Sign-Up Page" });
 });
 
-router.get("/profile", (req, res) => {
+router.get("/profile", withAuth, (req, res) => {
   try {
     res.render("profile");
   } catch (err) {
