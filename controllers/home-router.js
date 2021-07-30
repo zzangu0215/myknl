@@ -1,6 +1,5 @@
 const router = require("express").Router();
-
-// const { User, Pet } = require("../models");
+const { User, Pet } = require("../models");
 
 // use withAuth middleware to redirect from protected routes.
 const withAuth = require("../util/withAuth");
@@ -29,11 +28,22 @@ router.get("/signup", (req, res) => {
   res.render("signup", { title: "Sign-Up Page" });
 });
 
-router.get("/profile", withAuth, (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
-    res.render("profile");
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.userId, {
+      attributes: { exclude: ["password"] },
+      include: [{ model: Pet }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render("profile", {
+      ...user,
+      logged_in: true,
+    });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
   }
 });

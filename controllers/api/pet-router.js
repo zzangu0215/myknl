@@ -6,7 +6,7 @@ router.post("/", async (req, res) => {
   try {
     const newPet = await Pet.create({
       name: req.body.pet_name,
-      user_id: req.session.user_id,
+      user_id: req.session.userId,
     });
 
     res.status(200).json(newPet);
@@ -20,7 +20,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     const petData = await Pet.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        user_id: req.session.userId,
       },
     });
 
