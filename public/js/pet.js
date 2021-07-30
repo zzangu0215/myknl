@@ -19,8 +19,9 @@ async function petAddForm(event) {
 }
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
+  const targetBtn = event.target.closest(".remove-btn");
+  if (targetBtn) {
+    const id = targetBtn.getAttribute("data-id");
 
     const response = await fetch(`/api/pet/${id}`, {
       method: "DELETE",
