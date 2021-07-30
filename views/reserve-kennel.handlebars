@@ -1,6 +1,55 @@
-<h1>Reservation Page</h1>
+<h1 id="reserve-kennel-h1" style="text-align: center;">Choose the Kennel!</h1>
 
-<form>
+<div class="reservationpage-container">
+  <h1 style="text-align: center;">Available Kennels</h1>
+
+  <div class="box box-down cyan">
+    <h2>Kennel 1</h2>
+    <p>Capacity: 3 dog(s)</p>
+    <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+  </div>
+
+  <div class="box box-down orange">
+    <h2>Kennel 2</h2>
+    <p>Capacity: 2 dog(s)</p>
+    <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+  </div>
+
+  <div class="box box-down blue">
+    <h2>Kennel 3</h2>
+    <p>Capacity: None</p>
+    <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+  </div>
+</div>
+
+<div class="reservationpage-container">
+  <h1 style="text-align: center;">Choose Your Pet</h1>
+
+  <form class="reservation-form">
+
+    <div class="choosepet-container">
+      <input type="hidden" name="startDate" value="{{startDate}}">
+      <input type="hidden" name="endDate" value="{{endDate}}">
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Pets Lists
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item">Zzangu</a></li>
+          <li><a class="dropdown-item">Zara</a></li>
+          <li><a class="dropdown-item">Meka</a></li>
+        </ul>
+      </div>
+
+      <br><br>
+      <button type="submit" class="cancelBtn">Cancel</button>
+      <button type="submit" class="confirmBtn">Confirm</button>
+    </div>
+  </form>
+</div>
+
+{{!-- <form>
   <input type="hidden" name="startDate" value="{{startDate}}">
   <input type="hidden" name="endDate" value="{{endDate}}">
-</form>
+</form> --}}

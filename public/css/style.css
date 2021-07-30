@@ -58,7 +58,8 @@ input[type="password"]:focus {
 .login-container,
 .signup-container,
 .addpet-container,
-.datepick-container {
+.datepick-container,
+.choosepet-container {
   justify-content: center;
   padding: 10vmin;
   background: white;
@@ -67,7 +68,8 @@ input[type="password"]:focus {
 }
 
 .homepage-container,
-.profile-container {
+.profile-container,
+.reservationpage-container {
   justify-content: center;
   background: rgb(240, 237, 236);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
@@ -83,7 +85,9 @@ input[type="password"]:focus {
 .loginBtn,
 .signupBtn,
 .addpetBtn,
-.dateSelectBtn {
+.dateSelectBtn,
+.confirmBtn,
+.cancelBtn {
   display: flex;
   justify-content: center;
   background-image: linear-gradient(
@@ -119,6 +123,11 @@ input[type="password"]:focus {
 }
 
 .dateSelectBtn {
+  width: 50%;
+}
+
+.confirmBtn,
+.cancelBtn {
   width: 50%;
 }
 
