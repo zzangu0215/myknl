@@ -1,21 +1,48 @@
-const newFormHandler = async function (event) {
+var dropdown = document.getElementById("#userPets");
+var startDate = document.querySelector('input[name="startDate"]').value;
+var endDate = document.querySelector('input[name="endDate"]').value;
+var chosenPet = dropdown.options[dropdown.selectedIndex].value;
+
+const reservePet = async function (event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="post-title"]').value;
-  const body = document.querySelector('textarea[name="post-body"]').value;
-
-  await fetch("/api/post", {
-    method: "POST",
+  await fetch(`/api/reservation/kennel`, {
+    method: "PUT",
     body: JSON.stringify({
-      title,
-      body,
+      chosenPet,
     }),
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
-
-  document.location.replace("/dashboard");
 };
 
-document
-  .querySelector("#new-post-form")
-  .addEventListener("submit", newFormHandler);
+const confirmRes = async function (event) {
+  event.preventDefault();
+
+  await fetch(`/api/reservation/kennel`, {
+    method: "POST",
+    body: JSON.stringify({
+      startDate,
+      endDate,
+      chosenPet,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  document.location.replace("/reservation-lists");
+};
+
+const deleteClickHandler = async function () {
+  await fetch(`/api/reservation/kennel`, {
+    method: "DELETE",
+  });
+
+  document.location.replace("/reservation/dates");
+};
+
+document.querySelector("#userPets").addEventListener("click", reservePet);
+document.querySelector("#confirm").addEventListener("submit", confirmRes);
+document.querySelector("#cancel").addEventListener("click", deleteClickHandler);

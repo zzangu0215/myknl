@@ -35,20 +35,24 @@
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           Pets Lists
         </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item">Zzangu</a></li>
-          <li><a class="dropdown-item">Zara</a></li>
-          <li><a class="dropdown-item">Meka</a></li>
-        </ul>
+        <select class="dropdown-menu" id="userPets">
+          {{#if pets.length}}
+            {{#each pets as |pet|}}
+              <option><a class="dropdown-item" value="{{pet.id}}">{{pet.name}}</a></option>
+            {{/each}}
+          {{/if}}
+        </select>
       </div>
 
       <br><br>
-      <button type="submit" class="cancelBtn">Cancel</button>
-      <button type="submit" class="confirmBtn">Confirm</button>
+      <button type="submit" class="cancelBtn" id="cancel">Cancel</button>
+      <button type="button" class="confirmBtn" id="confirm">Confirm</button>
     </div>
   </form>
 </div>
 
+
+<script src='/js/reservation.js'></script>
 {{!-- <form>
   <input type="hidden" name="startDate" value="{{startDate}}">
   <input type="hidden" name="endDate" value="{{endDate}}">
