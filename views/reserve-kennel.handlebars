@@ -37,14 +37,14 @@
       <input type="hidden" name="startDate" value="{{startDate}}">
       <input type="hidden" name="endDate" value="{{endDate}}">
 
-      <div class="btn-group">
+      <div class="btn-group pets-selection">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           Pets Lists
         </button>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu pets-dropdown">
           {{#if pets.length}}
             {{#each pets as |pet|}}
-              <li><a class="dropdown-item" value="{{pet.id}}">{{pet.name}}</a></li>
+              <li><a class="dropdown-item" value="{{pet.id}}"><button class="user-pet">{{pet.name}}</button></a></li>
             {{/each}}
           {{/if}}
         </ul>
