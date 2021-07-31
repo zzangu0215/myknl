@@ -13,11 +13,11 @@ Reservations.init(
       autoIncrement: true,
     },
     startDate: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     endDate: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     kennel_id: {
