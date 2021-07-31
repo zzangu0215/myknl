@@ -40,6 +40,8 @@ const confirmRes = async function (event) {
   });
 
   // document.location.replace("/reservation-lists");
+  document.location.replace(`/reservation-lists?petId=${pet}`);
+  // document.location.href = `/reservation-lists?petId=${pet}`;
 };
 
 const deleteClickHandler = async function () {
