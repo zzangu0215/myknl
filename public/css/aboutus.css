@@ -4,7 +4,7 @@ body {
 .aboutus-container {
   user-select: none;
   margin: 20px auto;
-  background: #231e39;
+  background: #d3cdaf;
   color: #b3b8cd;
   border-radius: 5px;
   width: 350px;
@@ -12,7 +12,7 @@ body {
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
 }
 .cover-photo {
-  background: url(https://images.unsplash.com/photo-1540228232483-1b64a7024923?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+  background: url("../images/profile-bg.jpg");
   height: 160px;
   width: 100%;
   border-radius: 5px 5px 0 0;
@@ -22,18 +22,22 @@ body {
   width: 120px;
   border-radius: 50%;
   margin: 93px 0 0 -175px;
-  border: 1px solid #1f1a32;
+  border: 1px solid #d1cce7;
   padding: 7px;
-  background: #292343;
+  background: #b4add4;
 }
 .profile-name {
   font-size: 25px;
   font-weight: bold;
   margin: 27px 0 0 120px;
+  color: saddlebrown;
+  font-weight: bolder;
 }
 .about {
   margin-top: 35px;
   line-height: 21px;
+  color: saddlebrown;
+  font-weight: bolder;
 }
 button {
   margin: 10px 0 40px 0;
