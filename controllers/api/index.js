@@ -4,7 +4,7 @@ const petRouter = require("./pet-router");
 const reservedRouter = require("./reserved-router");
 const reservationsRouter = require("./reservations-router");
 
-router.use("/reservations", reservationsRouter);
+router.use("/reservation", reservationsRouter);
 router.use("/users", usersRouter);
 router.use("/pet", petRouter);
 router.use("/reserved", reservedRouter);

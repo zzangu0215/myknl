@@ -110,7 +110,16 @@ router.get("/reservation/kennel", async (req, res) => {
 
 router.get("/reservation-lists", (req, res) => {
   try {
-    res.render("reservation-lists");
+    const reservationData = Reservations.findAll();
+    console.log(reservationData);
+
+    const reservations = reservationData.map((reservation) =>
+      reservation.get({ plain: true })
+    );
+
+    res.render("reservation-lists", {
+      reservations,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
