@@ -108,10 +108,16 @@ router.get("/reservation/kennel", async (req, res) => {
   }
 });
 
-router.get("/reservation-lists", (req, res) => {
+router.get("/reservation-lists", async (req, res) => {
   try {
-    const reservationData = Reservations.findAll();
-    console.log(reservationData);
+    const petId = req.query.petId;
+    console.log(petId);
+
+    const reservationData = await Reservations.findAll({
+      where: {
+        pet_id: petId,
+      },
+    });
 
     const reservations = reservationData.map((reservation) =>
       reservation.get({ plain: true })
