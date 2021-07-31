@@ -114,14 +114,29 @@ router.get("/reservation-lists", async (req, res) => {
     console.log(petId);
 
     const reservationData = await Reservations.findAll({
-      where: {
-        pet_id: petId,
-      },
+      // where: {
+      //   pet_id: petId,
+      // },
+      include: [
+        {
+          model: Pet,
+          attributes: ["name"],
+          where: {
+            user_id: req.session.userId,
+          },
+        },
+        {
+          model: Kennel,
+          attributes: ["name"],
+        },
+      ],
     });
 
     const reservations = reservationData.map((reservation) =>
       reservation.get({ plain: true })
     );
+
+    console.log(reservations);
 
     res.render("reservation-lists", {
       reservations,

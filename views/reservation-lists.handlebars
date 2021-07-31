@@ -1,10 +1,29 @@
 <h1 id="reservationlists-h1" style="text-align: center;">Reservation Lists</h1>
 
-{{#each reservations as |reservation|}}
-<h2>{{reservation.id}}</h2>
-{{/each}}
-
 <div class="reservations-list">
+{{#each reservations as |reservation|}}
+
+<div class="reservation">
+  <div class="kennel_image">
+    <h2 class="reservationID">Reservation # {{reservation.id}}
+      <button class="icon-btn remove-btn">
+        <div class="btn-txt">Remove</div>
+      </button>
+    </h2>
+    {{#if reservation.kennel_id}}
+    <img src="/images/kennel{{reservation.kennel_id}}.jpg">
+    {{/if}}
+  </div>
+  <div class="reserved-pet">
+    <p>You've got Kennel{{reservation.kennel_id}} for {{reservation.pet.name}}
+    </p>
+  </div>
+</div>
+
+{{/each}}
+</div>
+
+{{!-- <div class="reservations-list">
   
   <div class="reservation">
     <div class="kennel_image">
@@ -45,4 +64,4 @@
     </div>
   </div>
 
-</div>
+</div> --}}
