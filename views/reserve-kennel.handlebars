@@ -1,11 +1,15 @@
 <h1 id="reserve-kennel-h1" style="text-align: center;">Choose the Kennel!</h1>
 
+<form class="reservation-form">
+
 <div class="reservationpage-container">
   <h1 style="text-align: center;">Available Kennels</h1>
 
   {{#each kennels as |kennel|}}
   <div class="box box-down cyan">
-    <h2>{{kennel.name}}</h2>
+    {{!-- <input type="button" class="myBtn2" value={{kennel.id}}> --}}
+    <button class="myBtn2" value={{kennel.id}} type="button"><h2>{{kennel.name}}</h2></button>
+    
     <p>Availability: {{ kennel.availability }} dog(s)</p>
     <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
   </div>
@@ -39,7 +43,7 @@
 <div class="reservationpage-container">
   <h1 style="text-align: center;">Choose Your Pet</h1>
 
-  <form class="reservation-form">
+  {{!-- <form class="reservation-form"> --}}
 
     <div class="choosepet-container">
       <input type="hidden" name="startDate" value="{{startDate}}">
@@ -52,19 +56,23 @@
         <ul class="dropdown-menu pets-dropdown">
           {{#if pets.length}}
             {{#each pets as |pet|}}
-              <li><a class="dropdown-item" value="{{pet.id}}"><button class="user-pet">{{pet.name}}</button></a></li>
+              <li><a class="dropdown-item"><button type="button" class="myBtn" value={{pet.id}}>{{pet.name}}</button></a></li>
             {{/each}}
           {{/if}}
         </ul>
       </div>
 
+
+{{!-- <button class="user-pet">{{pet.name}}</button> --}}
+
       <br><br>
-      <button type="submit" class="cancelBtn" id="cancel">Cancel</button>
-      <button type="button" class="confirmBtn" id="confirm">Confirm</button>
+      <button type="button" class="cancelBtn" id="cancel">Cancel</button>
+      <button type="submit" class="confirmBtn" id="confirm">Confirm</button>
     </div>
-  </form>
+  {{!-- </form> --}}
 </div>
 
+</form>
 
 <script src='/js/reservation.js'></script>
 {{!-- <form>
