@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Pet, Kennel } = require("../models");
+const { User, Pet, Kennel, Reservations } = require("../models");
 const sequelize = require("../config/connection");
 
 // use withAuth middleware to redirect from protected routes.
@@ -77,10 +77,30 @@ router.get("/reservation/kennel", async (req, res) => {
 
     const pets = petData.map((pet) => pet.get({ plain: true }));
 
+    const startDate = req.query.startDate.substring(0, 10);
+    const endDate = req.query.endDate.substring(0, 10);
+
+    const kennelData = await Kennel.findAll({
+      include: [
+        {
+          model: Reservations,
+          as: "reservations",
+        },
+      ],
+    });
+
+    const kennels = kennelData.map((kennel) => {
+      return {
+        ...kennel.get({ plain: true }),
+        availability: kennel.availability(startDate, endDate),
+      };
+    });
+
     res.render("reserve-kennel", {
+      kennels,
       pets,
-      startDate: req.query.startDate,
-      endDate: req.query.endDate,
+      startDate,
+      endDate,
     });
   } catch (err) {
     console.error(err);
