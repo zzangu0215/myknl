@@ -276,6 +276,13 @@ h2 {
 
 /* reservation lists cards */
 
+.reservationID {
+  text-align: center;
+  background-color: khaki;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 .reservations-list {
   z-index: 1;
   width: 100%;
@@ -316,7 +323,7 @@ h2 {
   font-size: 30px;
   margin-top: -80px;
   height: 40px;
-  color: hsl(180, 62%, 55%);
+  color: hsl(180, 4%, 15%);
 }
 
 .reservation:hover {
