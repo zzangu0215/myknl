@@ -109,4 +109,4 @@ Link to the js-datepicker
 
   - [**Vivianna's Portfolio**](https://vivicowan.github.io/updated-portfolio/) (to be updated)
   - **Github**: [**vivicowan**](https://github.com/vivicowan)
-  - Email: **vivicare@gmail.com**
+  - Email: **vivicowan0@gmail.com**
