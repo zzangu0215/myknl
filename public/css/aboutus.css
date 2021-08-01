@@ -1,6 +1,3 @@
-body {
-  font-family: Montserrat, sans-serif;
-}
 .aboutus-container {
   user-select: none;
   margin: 20px auto;
@@ -32,16 +29,20 @@ body {
   margin: 27px 0 0 120px;
   color: saddlebrown;
   font-weight: bolder;
+  font-family: Montserrat, sans-serif;
 }
 .about {
   margin-top: 35px;
   line-height: 21px;
   color: saddlebrown;
   font-weight: bolder;
+  font-family: Montserrat, sans-serif;
 }
-button {
+
+.msg-btn {
   margin: 10px 0 40px 0;
 }
+
 .msg-btn,
 .follow-btn {
   background: #03bfbc;
@@ -61,14 +62,4 @@ button {
   color: #231e39;
   background: #03bfbc;
   transition: 0.5s;
-}
-.container i {
-  padding-left: 20px;
-  font-size: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.container i:hover {
-  color: #03bfbc;
 }
