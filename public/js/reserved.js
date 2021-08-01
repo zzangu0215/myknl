@@ -1,13 +1,23 @@
-const postId = document.querySelector('input[name="post-id"]').value;
+const delButtonHandler = async (event) => {
+  console.log(event.target);
+  console.log(event.target.closest(".remove-btn"));
 
-const deleteClickHandler = async function () {
-  await fetch(`/api/post/${postId}`, {
-    method: "DELETE",
-  });
+  const targetBtn = event.target.closest(".remove-btn");
+  if (targetBtn) {
+    const id = targetBtn.getAttribute("data-id");
 
-  document.location.replace("/dashboard");
+    const response = await fetch(`/api/reserved/${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      document.location.replace("/reservation-lists");
+    } else {
+      alert("Failed to delete reservation");
+    }
+  }
 };
 
 document
-  .querySelector("#delete-btn")
-  .addEventListener("click", deleteClickHandler);
+  .querySelector(".reservations-list")
+  .addEventListener("click", delButtonHandler);
