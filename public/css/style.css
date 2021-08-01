@@ -265,7 +265,8 @@ input[type="password"]:focus {
 
 .homepage-container,
 .profile-container,
-.reservationpage-container {
+.reservationpage-container,
+.reservationlists-container {
   justify-content: center;
   background: rgb(240, 237, 236);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
@@ -481,7 +482,7 @@ h2 {
 
 .reservations-list {
   z-index: 1;
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
