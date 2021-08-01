@@ -29,6 +29,16 @@ b {
   color: black;
 }
 
+#homepage-h1,
+#aboutus-h1,
+#profile-h1,
+#reservationlists-h1,
+#reserve-calendar-h1,
+#reserve-kennel-h1 {
+  font-family: "Concert One", cursive;
+  background-color: white;
+}
+
 /* navbar */
 
 *,
@@ -769,5 +779,172 @@ h2 {
 
   .footer-distributed .footer-center i {
     margin-left: 0;
+  }
+}
+
+/* home page */
+
+.welcome-box {
+  width: 85%;
+  display: grid;
+  grid-gap: 15px;
+  margin: 0 auto;
+  column-count: 2;
+}
+
+.welcome-card {
+  float: left;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-card:before,
+.welcome-card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -1;
+}
+.welcome-card:hover:before {
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+.welcome-card:hover:after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-card .logoBox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.welcome-card:hover .logoBox {
+  bottom: 80px;
+}
+
+.welcome-card .logoBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome-card .welcome-msg {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+.welcome-card .welcome-msg h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.welcome-details {
+  /* font-family: "Permanent Marker", cursive; */
+  font-family: "Concert One", cursive;
+}
+
+.welcome-msg-h2 {
+  font-family: "Caveat", cursive;
+}
+
+#customer-review-h2,
+#myknl-zap {
+  text-align: center;
+  font-family: "Satisfy", cursive;
+}
+
+.review-container1,
+.review-container2 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.review-profile {
+  width: 60px;
+  border-radius: 60px;
+  float: right;
+}
+
+.red {
+  border-top: 3px solid var(--red);
+}
+
+.review p {
+  color: var(--grayishBlue);
+}
+
+.review {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 20px;
+  background-color: linen;
+}
+
+@media (max-width: 450px) {
+  .review {
+    height: 200px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .review {
+    text-align: center;
+    height: 180px;
+  }
+
+  .reviewer {
+    float: left;
+  }
+}
+
+@media (min-width: 950px) {
+  .review-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .review-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .review-down {
+    position: relative;
+    top: 150px;
+  }
+  .review {
+    width: 20%;
+  }
+  .header p {
+    width: 30%;
   }
 }
