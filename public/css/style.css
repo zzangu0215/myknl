@@ -330,9 +330,13 @@ input[type="password"]:focus {
   width: 50%;
 }
 
+.confirmBtn {
+  float: right;
+}
+
 .confirmBtn,
 .cancelBtn {
-  width: 50%;
+  width: 30%;
 }
 
 .loginBtn:hover,
@@ -476,79 +480,6 @@ h2 {
   right: 15px;
   height: 4px;
   top: calc(50% - 2px);
-}
-
-/* reservation lists cards */
-
-.reservationID {
-  text-align: center;
-  background-color: khaki;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.reservations-list {
-  z-index: 1;
-  width: 95%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.reservation {
-  margin: 30px auto;
-  width: 500px;
-  height: 300px;
-  border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.reservation .kennel_image {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-}
-
-.reservation .kennel_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  object-fit: cover;
-}
-
-.reservation .reserved-pet {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-  color: hsl(180, 4%, 15%);
-}
-
-.reservation:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-}
-
-.title-white {
-  color: white;
-}
-
-.title-black {
-  color: black;
-}
-
-@media all and (max-width: 500px) {
-  .reservations-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
 }
 
 /* reservation page kennel selection */
@@ -925,7 +856,7 @@ h2 {
 @media (max-width: 950px) and (min-width: 450px) {
   .review {
     text-align: center;
-    height: 180px;
+    height: 230px;
   }
 
   .reviewer {
@@ -955,4 +886,100 @@ h2 {
   .header p {
     width: 30%;
   }
+}
+
+/* reservation lists cards */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reserved-kennel-id {
+  color: rgb(75, 57, 57);
+  font-weight: bolder;
+}
+
+.reserved-pet-name {
+  color: blueviolet;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.reservations-list {
+  z-index: 1;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.kennel-img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.reservation-lists-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reservation-lists-cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .reservation-lists-cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .reservation-lists-cards_item {
+    width: 33.3333%;
+  }
+}
+
+.reservation-lists-card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.reservation-lists-card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%);
+}
+
+.reservation-lists-card_title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.reservation-dates {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.reservation-lists-card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
 }

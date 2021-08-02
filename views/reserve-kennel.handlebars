@@ -30,15 +30,42 @@
         <ul class="dropdown-menu pets-dropdown">
           {{#if pets.length}}
             {{#each pets as |pet|}}
-              <li><a class="dropdown-item"><button type="button" class="petSelectBtn" value={{pet.id}}>{{pet.name}}</button></a></li>
+              <li><a class="dropdown-item"><button type="button" class="petSelectBtn" value={{pet.id}}>{{pet.name}}, ID: {{pet.id}}</button></a></li>
             {{/each}}
           {{/if}}
         </ul>
       </div>
 
       <br><br>
-      <button type="button" class="cancelBtn" id="cancel">Cancel</button>
-      <button type="submit" class="confirmBtn" id="confirm">Confirm</button>
+
+      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Make a Reservation!
+      </button>
+
+<!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group">
+                <li class="list-group-item">Start Date:&emsp;{{startDate}}</li>
+                <li class="list-group-item">End Date:&emsp;{{endDate}}</li>
+                <li class="list-group-item">Kennel ID:&emsp;<span class="confirm-kennelID"></span></li>
+                <li class="list-group-item">Pet ID:&emsp;<span class="confirm-petName"></span></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="cancelBtn" id="cancel">Cancel</button>
+              <button type="submit" class="confirmBtn" id="confirm">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
 
 </div>

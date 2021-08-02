@@ -1,27 +1,102 @@
 <h1 id="reservationlists-h1" style="text-align: center;">Reservation Lists</h1>
 
 {{#if reservations.length}}
-<div class="reservationlists-container reservations-list">
-  {{#each reservations as |reservation|}}
-    <div class="reservation">
-      <div class="kennel_image">
-        <h2 class="reservationID">Reservation # {{reservation.id}}
+<div class="main reservationlists-container reservations-list">
+  <ul class="reservation-lists-cards">
+    {{#each reservations as |reservation|}}
+    <li class="reservation-lists-cards_item">
+      <div class="reservation-lists-card">
+        <div class="reservation-lists-card_image">
+          {{#if reservation.kennel_id}}
+          <img class="kennel-img" src="/images/kennel{{reservation.kennel_id}}.jpg">
+          {{/if}}
+        </div>
+        <div class="reservation-lists-card_content">
+          <h2 class="reservation-lists-card_title">Reservation ID: {{reservation.id}}</h2>
+          <h3 class="reservation-dates">{{reservation.startDate}} ~ {{reservation.endDate}}</h3><br>
+          <p class="reservation-lists-card_text">
+            You've got <span class="reserved-kennel-id">Kennel {{reservation.kennel_id}}</span> for <span class="reserved-pet-name">{{reservation.pet.name}}</span>
+          </p>
           <button class="icon-btn remove-btn" data-id="{{reservation.id}}">
             <div class="btn-txt">Remove</div>
           </button>
-        </h2>
-        {{#if reservation.kennel_id}}
-        <img src="/images/kennel{{reservation.kennel_id}}.jpg">
-        {{/if}}
+        </div>
       </div>
-      <div class="reserved-pet">
-        <p>You've got Kennel{{reservation.kennel_id}} for {{reservation.pet.name}}
-        </p>
-      </div>
-    </div>
-  {{/each}}
+    </li>
+    {{/each}}
+  </ul>
 </div>
 {{/if}}
+
+
+{{!-- <div class="main">
+  <h1>Responsive Card Grid Layout</h1>
+  <ul class="reservation-lists-cards">
+    <li class="reservation-lists-cards_item">
+      <div class="reservation-lists-card">
+        <div class="reservation-lists-card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+        <div class="reservation-lists-card_content">
+          <h2 class="reservation-lists-card_title">Card Grid Layout</h2>
+          <p class="reservation-lists-card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="reservation-lists-cards_item">
+      <div class="reservation-lists-card">
+        <div class="reservation-lists-card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+        <div class="reservation-lists-card_content">
+          <h2 class="reservation-lists-card_title">Card Grid Layout</h2>
+          <p class="reservation-lists-card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="reservation-lists-cards_item">
+      <div class="reservation-lists-card">
+        <div class="reservation-lists-card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+        <div class="reservation-lists-card_content">
+          <h2 class="reservation-lists-card_title">Card Grid Layout</h2>
+          <p class="reservation-lists-card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="reservation-lists-cards_item">
+      <div class="reservation-lists-card">
+        <div class="reservation-lists-card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+        <div class="reservation-lists-card_content">
+          <h2 class="reservation-lists-card_title">Card Grid Layout</h2>
+          <p class="reservation-lists-card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="reservation-lists-cards_item">
+      <div class="reservation-lists-card">
+        <div class="reservation-lists-card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+        <div class="reservation-lists-card_content">
+          <h2 class="reservation-lists-card_title">Card Grid Layout</h2>
+          <p class="reservation-lists-card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="reservation-lists-cards_item">
+      <div class="reservation-lists-card">
+        <div class="reservation-lists-card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+        <div class="reservation-lists-card_content">
+          <h2 class="reservation-lists-card_title">Card Grid Layout</h2>
+          <p class="reservation-lists-card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<h3 class="made_by">Made with ♡</h3> --}}
+
 
 <script src="/js/reserved.js"></script>
 

@@ -1,6 +1,5 @@
 const router = require("express").Router();
-const { Pet, Reservations, Kennel } = require("../../models");
-const withAuth = require("../../util/withAuth");
+const { Reservations } = require("../../models");
 
 router.post("/kennel", async (req, res) => {
   try {
