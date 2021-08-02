@@ -33,7 +33,10 @@ This app allows pet owners to be able to easily book a reservation at their loca
 
 ## ❗ Features
 
-Features
+1. Users are able to make an account
+2. Add and Delete pets from their profile
+3. Make reservations and Cancel reservations
+4. Sign in and Logout
 
 ## 💾 Installation
 
