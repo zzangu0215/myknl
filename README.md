@@ -29,7 +29,7 @@ Proposal Link: [**Proposal**](https://docs.google.com/document/d/1oeiXWUtq-m31Dl
 
 Presentation Link: [**Presentation**](https://docs.google.com/presentation/d/1rhb8wCvNMTrJTPZZ1ylaKObvnb1pCD_-xRjfb8RJT7E/edit?usp=sharing)
 
-Description
+This app allows pet owners to be able to easily book a reservation at their local pet hotel. Users will be able to make an account with their own pet and reservation data.
 
 ## ❗ Features
 
