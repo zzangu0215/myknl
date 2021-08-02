@@ -3,7 +3,7 @@
 <form class="reservation-form">
 
 <div class="reservationpage-container">
-  <h1 style="text-align: center;">Available Kennels</h1>
+  <h1 id="available-kennels" style="text-align: center;">Available Kennels</h1>
 
   {{#each kennels as |kennel|}}
   <div class="kennel-card kennel-card--1">
@@ -17,7 +17,7 @@
 </div>
 
 <div class="reservationpage-container">
-  <h1 style="text-align: center;">Choose Your Pet</h1>
+  <h1 id="choose-your-pet" style="text-align: center;">Choose Your Pet</h1>
 
     <div class="choosepet-container">
       <input type="hidden" name="startDate" value="{{startDate}}">
