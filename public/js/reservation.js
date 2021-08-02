@@ -7,9 +7,6 @@ let kennel;
 const confirmRes = async function (event) {
   event.preventDefault();
 
-  console.log({ pet });
-  console.log({ kennel });
-
   await fetch(`/api/reservation/kennel`, {
     method: "POST",
     body: JSON.stringify({
@@ -35,16 +32,12 @@ const deleteClickHandler = async function () {
 };
 
 function petSelection() {
-  console.log(this.value);
-
   pet = this.value;
 
   return pet;
 }
 
 function kennelSelection() {
-  console.log(this.value);
-
   kennel = this.value;
 
   return kennel;

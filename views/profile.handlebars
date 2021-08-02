@@ -2,7 +2,7 @@
 
 {{#if pets.length}}
   <div class="profile-container pet-list">
-   <h1 style="text-align: center;">Your Pets:</h1>
+   <h1 id="your-pets" style="text-align: center;">Your Pets:</h1>
     {{#each pets as |pet|}}
       <div class="pet-box box-down cyan">
         <h2>{{pet.name}}
@@ -17,11 +17,11 @@
 
 
 <div class="profile-container">
-  <h1 style="text-align: center;">Add more pet!</h1>
+  <h1 id="add-more-pet" style="text-align: center;">Add more pet!</h1>
 
   <div class="addpet-container">
     <label for="password"><b>Enter your pet's name.</b></label>
-    <br>
+    <br><br>
     <input type="text" placeholder="Wrangler" name="petname" id="added-pet">
     <br>
     <button type="submit" id="petAdd" class="addpetBtn">Submit</button>
