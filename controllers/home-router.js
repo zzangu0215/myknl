@@ -1,13 +1,7 @@
 const router = require("express").Router();
 const { User, Pet, Kennel, Reservations } = require("../models");
 
-// use withAuth middleware to redirect from protected routes.
 const withAuth = require("../util/withAuth");
-
-// example of a protected route
-// router.get("/users-only", withAuth, (req, res) => {
-//   // ...
-// });
 
 router.get("/", async (req, res) => {
   try {
@@ -114,13 +108,7 @@ router.get("/reservation/kennel", withAuth, async (req, res) => {
 
 router.get("/reservation-lists", withAuth, async (req, res) => {
   try {
-    const petId = req.query.petId;
-    console.log(petId);
-
     const reservationData = await Reservations.findAll({
-      // where: {
-      //   pet_id: petId,
-      // },
       include: [
         {
           model: Pet,
@@ -139,8 +127,6 @@ router.get("/reservation-lists", withAuth, async (req, res) => {
     const reservations = reservationData.map((reservation) =>
       reservation.get({ plain: true })
     );
-
-    console.log(reservations);
 
     res.render("reservation-lists", {
       reservations,
