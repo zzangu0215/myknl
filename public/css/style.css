@@ -932,6 +932,11 @@ h2 {
   padding: 1rem;
 }
 
+.reservation-lists-cards_item img {
+  width: 500px;
+  height: 300px;
+}
+
 @media (min-width: 40rem) {
   .reservation-lists-cards_item {
     width: 50%;
@@ -978,7 +983,7 @@ h2 {
 
 .reservation-lists-card_text {
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
   font-weight: 400;
