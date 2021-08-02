@@ -10,6 +10,7 @@
     <img src="https://img.shields.io/badge/-json-orange" />
     <img src="https://img.shields.io/badge/-express-red" />
     <img src="https://img.shields.io/badge/-sequelize-brown" />
+    <img src="https://img.shields.io/badge/-jsDatepicker-brown" />
 </p>
 
 ## Table of Contents
@@ -20,10 +21,13 @@
 - [**Usage**](#-usage)
 - [**License**](#-license)
 - [**Demo Video**](#-demo-video)
-- [**Contributing**](#-contributing)
 - [**Author**](#-author)
 
 ## 📑 Description
+
+Proposal Link: [**Proposal**](https://docs.google.com/document/d/1oeiXWUtq-m31DlMHyNK1g9FK8J4q763C3GixPM8mxKc/edit?usp=sharing)
+
+Presentation Link: [**Presentation**](https://docs.google.com/presentation/d/1rhb8wCvNMTrJTPZZ1ylaKObvnb1pCD_-xRjfb8RJT7E/edit?usp=sharing)
 
 Description
 
@@ -42,6 +46,8 @@ Type and run **`npm i`** in your terminal to install the following dependencies.
 - **`dotenv`**
 - **`bcrypt`**
 - **`js-datepicker`**
+
+**Credits**: Thank's to [**js-datepicker**](https://www.npmjs.com/package/js-datepicker) for amazing date picker packages.
 
 ## 💻 Usage
 
@@ -84,10 +90,6 @@ If you want to watch the demo video for how to use the application, check out th
 
 **CLICK THE PLAY BUTTON**  
 [![Image Caption](images/youtube-play-button.PNG)](https://youtu.be/DtImnxCd0y0)
-
-## 🔥 Contributing
-
-Link to the js-datepicker
 
 ## 😎 Author
 
