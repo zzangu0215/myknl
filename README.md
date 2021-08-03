@@ -16,27 +16,36 @@
 ## Table of Contents
 
 - [**Description**](#-description)
-- [**Features**](#-features)
+- [**Demo Video**](#-demo-video)
 - [**Installation**](#-installation)
 - [**Usage**](#-usage)
 - [**License**](#-license)
-- [**Demo Video**](#-demo-video)
 - [**Author**](#-author)
 
 ## 📑 Description
 
-Proposal Link: [**Proposal**](https://docs.google.com/document/d/1oeiXWUtq-m31DlMHyNK1g9FK8J4q763C3GixPM8mxKc/edit?usp=sharing)
+**MyKNL** is here for you to make a reservation at your local pet hotels.  
+If you need to be out of town for any reason without your dog?
 
-Presentation Link: [**Presentation**](https://docs.google.com/presentation/d/1rhb8wCvNMTrJTPZZ1ylaKObvnb1pCD_-xRjfb8RJT7E/edit?usp=sharing)
+We, **MyKNL**, the company of the team **Zzangu and the Pals**, are here to take care of your precious pup!! Easily sign up, add your pet, and make a reservation.
 
-This app allows pet owners to be able to easily book a reservation at their local pet hotel. Users will be able to make an account with their own pet and reservation data.
+Hurry up!! The kennels are about to be fully booked soon!! Don't miss the amazing experience with us!
 
-## ❗ Features
+**CLICK THE LOGO TO EXPLORE OUR WEBSITE**  
+[![Image Caption](public/images/logo_readme.PNG)](https://myknl-zap.herokuapp.com/)
 
-1. Users are able to make an account
-2. Add and Delete pets from their profile
-3. Make reservations and Cancel reservations
-4. Sign in and Logout
+Below are the links for our proposal and presentation.
+
+- Proposal Link: [**MyKNL Proposal**](https://docs.google.com/document/d/1oeiXWUtq-m31DlMHyNK1g9FK8J4q763C3GixPM8mxKc/edit?usp=sharing)
+- Presentation Link: [**MyKNL Presentation**](https://docs.google.com/presentation/d/1rhb8wCvNMTrJTPZZ1ylaKObvnb1pCD_-xRjfb8RJT7E/edit?usp=sharing)
+
+## 🎬 Demo Video
+
+If you want to get an idea of how to explore our website?  
+Check out our demo video below.
+
+**CLICK THE IMAGE TO PLAY THE DEMO VIDEO**  
+[![Image Caption](public/images/demo-thumbnail.PNG)](https://youtu.be/UE-s-nBnt44)
 
 ## 💾 Installation
 
@@ -87,16 +96,9 @@ Type and run following command in your terminal to start the server.
 
 This application is covered by the **ISC** license.
 
-## 🎬 Demo Video
-
-If you want to watch the demo video for how to use the application, check out the video below.
-
-**CLICK THE IMAGE TO PLAY THE DEMO VIDEO**  
-[![Image Caption](public/images/demo-thumbnail.PNG)](https://youtu.be/UE-s-nBnt44)
-
 ## 😎 Author
 
-🖐 If you have any question about me or my project, feel free to contact us!
+🖐 If you have any question about us or our project, feel free to contact us!
 
 - **Jun Park**
 
