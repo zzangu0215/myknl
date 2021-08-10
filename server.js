@@ -6,13 +6,15 @@ const sequelize = require("./config/connection");
 const router = require("./controllers");
 const helpers = require("./util/helpers");
 const sessionMiddleware = require("./config/session");
+const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 // setup app middleware
+app.use(compression());
 app.use(sessionMiddleware);
-app.use(express.static(path.join(__dirname, "dist")))
+app.use(express.static(path.join(__dirname, "dist")));
 app.use(express.static(path.join(__dirname, "public")));
 app.engine("handlebars", exphbs({ helpers }));
 app.set("view engine", "handlebars");
