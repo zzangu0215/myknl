@@ -12,6 +12,7 @@ const app = express();
 
 // setup app middleware
 app.use(sessionMiddleware);
+app.use(express.static(path.join(__dirname, "dist")))
 app.use(express.static(path.join(__dirname, "public")));
 app.engine("handlebars", exphbs({ helpers }));
 app.set("view engine", "handlebars");
